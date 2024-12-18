@@ -1,48 +1,46 @@
-import styled from "styled-components";
 import GlobalStyle from "./globalStyles.ts";
-import { Grid, PrimaryGridRow, SecondaryGridRow } from "./components/layout/grid/index.ts";
-import { PageLayout } from "./components/layout/page-layout/index.ts";
-import { CollectionCard, CollectionCardKind } from "./components/card/index.ts";
-import collections from "../data/collections.json";
-
-const CollectionsTitle = styled.h2`
-  font-weight: 600;
-  letter-spacing: 0;
-  font-size: 1.875rem;
-  margin-bottom: 2rem;
-`;
+import PageLayout from "./components/page-layout/index.tsx";
+import { Grid, Column } from "./components/grid/Styles.tsx";
 
 export default function App() {
   return (
     <>
       <GlobalStyle />
       <PageLayout>
-        <CollectionsTitle>Our Collections</CollectionsTitle>
         <Grid>
-          <PrimaryGridRow>
-            <CollectionCard
-              kind={CollectionCardKind.primary}
-              name={collections[0].name}
-              description={collections[0].description}
-              imgSrc={collections[0].image_url}
-            />
-          </PrimaryGridRow>
-          <SecondaryGridRow>
-            <CollectionCard
-              kind={CollectionCardKind.secondary}
-              name={collections[1].name}
-              description={collections[1].description}
-              imgSrc={collections[1].image_url}
-            />
-          </SecondaryGridRow>
-          <SecondaryGridRow>
-            <CollectionCard
-              kind={CollectionCardKind.secondary}
-              name={collections[2].name}
-              description={collections[2].description}
-              imgSrc={collections[2].image_url}
-            />
-          </SecondaryGridRow>
+          <Column sm={2} md={3} lg={6}>
+            <p>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Inventore, maxime quidem! Unde ratione
+              consequatur reiciendis. Quasi consequuntur, recusandae debitis molestiae quam vero laboriosam dolorum eos
+              quod iste tempore, natus est. Lorem ipsum dolor sit amet consectetur adipisicing elit. Inventore, maxime
+              quidem! Unde ratione consequatur reiciendis. Quasi consequuntur, recusandae debitis molestiae quam vero
+              laboriosam dolorum eos quod iste tempore, natus est. Lorem ipsum dolor sit amet consectetur adipisicing
+              elit. Inventore, maxime quidem! Unde ratione consequatur reiciendis. Quasi consequuntur, recusandae
+              debitis molestiae quam vero laboriosam dolorum eos quod iste tempore, natus est.
+            </p>
+          </Column>
+          <Column sm={2} md={3} lg={6}>
+            <p>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Inventore, maxime quidem! Unde ratione
+              consequatur reiciendis. Quasi consequuntur, recusandae debitis molestiae quam vero laboriosam dolorum eos
+              quod iste tempore, natus est. Lorem ipsum dolor sit amet consectetur adipisicing elit. Inventore, maxime
+              quidem! Unde ratione consequatur reiciendis. Quasi consequuntur, recusandae debitis molestiae quam vero
+              laboriosam dolorum eos quod iste tempore, natus est. Lorem ipsum dolor sit amet consectetur adipisicing
+              elit. Inventore, maxime quidem! Unde ratione consequatur reiciendis. Quasi consequuntur, recusandae
+              debitis molestiae quam vero laboriosam dolorum eos quod iste tempore, natus est.
+            </p>
+          </Column>
+          <Column sm={2} md={3} lg={6}>
+            <p>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Inventore, maxime quidem! Unde ratione
+              consequatur reiciendis. Quasi consequuntur, recusandae debitis molestiae quam vero laboriosam dolorum eos
+              quod iste tempore, natus est. Lorem ipsum dolor sit amet consectetur adipisicing elit. Inventore, maxime
+              quidem! Unde ratione consequatur reiciendis. Quasi consequuntur, recusandae debitis molestiae quam vero
+              laboriosam dolorum eos quod iste tempore, natus est. Lorem ipsum dolor sit amet consectetur adipisicing
+              elit. Inventore, maxime quidem! Unde ratione consequatur reiciendis. Quasi consequuntur, recusandae
+              debitis molestiae quam vero laboriosam dolorum eos quod iste tempore, natus est.
+            </p>
+          </Column>
         </Grid>
       </PageLayout>
     </>
