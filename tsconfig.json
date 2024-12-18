@@ -18,7 +18,9 @@
     "strict": true,
     "noUnusedLocals": true,
     "noUnusedParameters": true,
-    "noFallthroughCasesInSwitch": true
+    "noFallthroughCasesInSwitch": true,
+
+    "types": ["cypress", "jest"]
   },
   "include": ["src", "./test/setup.ts", "./svg.d.ts"],
   "references": [{ "path": "./tsconfig.node.json" }]
